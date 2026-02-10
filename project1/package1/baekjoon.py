@@ -519,6 +519,45 @@ else:
 #         dp[i] = min(dp[i//2] +1,dp[i])
 #     if i % 3 == 0:
 #         dp[i] = min(dp[i//3] +1,dp[i])
-
 # print(dp[-1])
 
+
+
+# T = int(input())
+# for _ in range(T):
+#     N = int(input())
+#     dp = [0]*(N+3)
+#     dp[1] = 1
+#     dp[2] = 2
+#     dp[3] = 4
+#     if N > 3:
+#         for i in range(4,N+1):
+#             dp[i] = dp[i-3]+dp[i-2]+dp[i-1]
+#     print(dp[N])
+
+import sys
+from collections import defaultdict,deque
+input = sys.stdin.readline
+nodedict = defaultdict(list)
+N, L = map(int,input().split())
+for i in range(L):
+    a,b = map(int,input().split())
+    nodedict[a].append(b)
+    nodedict[b].append(a)
+visit = [False]*(N+1)
+count = 0
+def bfs(v):
+    queue = deque([v])
+    visit[v] = True
+    while queue:
+        node = queue.popleft()
+        willgo = nodedict[node]
+        for i in willgo:
+            if not visit[i]:
+                queue.append(i)
+                visit[i] = True
+for i in range(1,N+1):
+    if not visit[i]:
+        bfs(i)
+        count += 1
+print(count)      
