@@ -315,66 +315,68 @@ if __name__ == "__main__":
 # af = Fox()
 # af.foxmethod()
 
-from abc import *  
+# from abc import *  
 
-class Employee(metaclass=ABCMeta):
-    def __init__(self, irum, nai):
-        self.irum = irum
-        self.nai = nai
+# class Employee(metaclass=ABCMeta):
+#     def __init__(self, irum, nai):
+#         self.irum = irum
+#         self.nai = nai
         
-    @abstractmethod
-    def pay(self):
-        pass
-    @abstractmethod
-    def data_print(self):
-        pass
+#     @abstractmethod
+#     def pay(self):
+#         pass
+#     @abstractmethod
+#     def data_print(self):
+#         pass
     
-    def irumnai_print(self):
-        print("이름 : "+self.irum+" 나이 : "+ str(self.nai), end=' ')
+#     def irumnai_print(self):
+#         print("이름 : "+self.irum+" 나이 : "+ str(self.nai), end=' ')
         
         
-class Temporary(Employee):
-    ilsu = 0
-    ildang = 0
-    def __init__(self, irum, nai, ilsu, ildang):
-        Employee.__init__(self, irum, nai)
-        self.ilsu = ilsu
-        self.ildang = ildang
-    def pay(self):
-        return self.ilsu*self.ildang
-    def data_print(self):
-        self.irumnai_print()
-        print(f", 월급 : {self.pay():.0f}")
+# class Temporary(Employee):
+#     ilsu = 0
+#     ildang = 0
+#     def __init__(self, irum, nai, ilsu, ildang):
+#         Employee.__init__(self, irum, nai)
+#         self.ilsu = ilsu
+#         self.ildang = ildang
+#     def pay(self):
+#         return self.ilsu*self.ildang
+#     def data_print(self):
+#         self.irumnai_print()
+#         print(f", 월급 : {self.pay():.0f}")
         
-class Regular(Employee):
-    salary = 0
-    def __init__(self,irum,nai,salary):
-        Employee.__init__(self, irum, nai)
-        self.salary = salary
-    def pay(self):
-        return self.salary
-    def data_print(self):
-        self.irumnai_print()
-        print(f", 급여 : {self.pay():.0f}")
+# class Regular(Employee):
+#     salary = 0
+#     def __init__(self,irum,nai,salary):
+#         Employee.__init__(self, irum, nai)
+#         self.salary = salary
+#     def pay(self):
+#         return self.salary
+#     def data_print(self):
+#         self.irumnai_print()
+#         print(f", 급여 : {self.pay():.0f}")
     
-class Salesman(Regular):
-    sales = 0
-    commission = 0
-    def __init__(self,irum,nai,salary,sales,commision):
-        super().__init__(irum,nai,salary)
-        self.sales = sales
-        self.commission = commision
+# class Salesman(Regular):
+#     sales = 0
+#     commission = 0
+#     def __init__(self,irum,nai,salary,sales,commision):
+#         super().__init__(irum,nai,salary)
+#         self.sales = sales
+#         self.commission = commision
 
-    def pay(self):
-        return self.salary + (self.sales*self.commission)
-    def data_print(self):
-        self.irumnai_print()
-        print(f", 수령액 : {self.pay():.0f}")
+#     def pay(self):
+#         return self.salary + (self.sales*self.commission)
+#     def data_print(self):
+#         self.irumnai_print()
+#         print(f", 수령액 : {self.pay():.0f}")
 
-t = Temporary("홍길동",25,20,150000)
-r = Regular("한국인", 27, 3500000)
-s = Salesman("손오공", 29, 1200000, 5000000, 0.25)
+# t = Temporary("홍길동",25,20,150000)
+# r = Regular("한국인", 27, 3500000)
+# s = Salesman("손오공", 29, 1200000, 5000000, 0.25)
 
-t.data_print()
-r.data_print()
-s.data_print()
+# t.data_print()
+# r.data_print()
+# s.data_print()
+
+# 수정 테스트
