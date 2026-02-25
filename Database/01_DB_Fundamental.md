@@ -13,8 +13,6 @@ MariaDB는 MySQL의 파생 프로그램으로 사용법이 유사합니다.
 > **이미지 저장**
 > DB에 사진 파일을 직접 넣으면 용량이 무거워져 성능이 저하됩니다. 일반적으로 DB에는 **파일의 저장 경로(Path)**만 저장합니다.
 
----
-
 ## 2. Database Terminology
 데이터베이스의 구조를 부르는 다양한 명칭입니다.
 
@@ -22,8 +20,6 @@ MariaDB는 MySQL의 파생 프로그램으로 사용법이 유사합니다.
 | :--- | :--- | :--- | :--- |
 | **세로** | Column | Field / Attribute | 열 / 속성 |
 | **가로** | Row | Record / Tuple | 행 |
-
----
 
 ## 3. 정규화 (Normalization)
 데이터 중복을 최소화하고 무결성을 유지하기 위해 스키마를 최소 단위로 쪼개는 과정입니다.
@@ -43,7 +39,6 @@ MariaDB는 MySQL의 파생 프로그램으로 사용법이 유사합니다.
 ### BCNF (Boyce-Codd 정규형)
 * 모든 결정자가 후보키(Candidate Key)가 되도록 설계.
 
----
 
 ## 4. SQL Classification
 사용 용도에 따라 DDL, DML, DCL로 구분합니다.
@@ -53,8 +48,6 @@ MariaDB는 MySQL의 파생 프로그램으로 사용법이 유사합니다.
 | **DDL** (정의어) | DB 구조 정의, 수정, 삭제 | `CREATE`, `ALTER`, `DROP` | DBA |
 | **DML** (조작어) | 데이터 검색, 입력, 수정, 삭제 | `SELECT`, `INSERT`, `UPDATE`, `DELETE` (CRUD) | 개발자, 사용자 |
 | **DCL** (제어어) | 권한 부여, 보안, 트랜잭션 | `COMMIT`, `ROLLBACK`, `GRANT`, `REVOKE` | DBA |
-
----
 
 ## 5. 정규화 예시 (Table Splitting)
 직원 정보와 가족 정보를 하나의 테이블에 두지 않고 분리하여 관리합니다.
