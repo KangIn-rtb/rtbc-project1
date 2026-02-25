@@ -1,2 +1,7 @@
-# rtbc-project1
-파이썬 합습, 백준공부 0210
+# Learning Archive
+
+## Categories 
+- [Database](./Database/)
+- [Python](./Python/)
+- [Webprogrming](./Webprograming/) <-now
+
