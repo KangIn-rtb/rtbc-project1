@@ -4,7 +4,7 @@
 > - MariaDB 프롬프트: 일회용 / 검증용 -> 실제 상황에선 파이썬 작성 후 검증에 사용
 > - 수업에선 편의를 위해 **HeidiSQL** 사용
 
----
+
 
 ## 기본 규칙
 
@@ -12,7 +12,7 @@
 - 실제 SQL 문 자체에는 `;` 포함하지 않음
 - SQL 키워드는 **대소문자 구분 없음** (`SELECT` = `select`)
 
----
+
 
 ## Database 관련
 
@@ -30,7 +30,7 @@ USE test;
 DROP DATABASE exdb;
 ```
 
----
+
 
 ## Table 관련
 
@@ -51,7 +51,7 @@ CREATE TABLE mytab (
 DROP TABLE mytab;
 ```
 
----
+
 
 ## CRUD
 
@@ -83,7 +83,6 @@ UPDATE mytab SET name = '홍' WHERE no = 1;
 DELETE FROM mytab WHERE no = 2;
 ```
 
----
 
 ## 빠른 참조 요약
 
