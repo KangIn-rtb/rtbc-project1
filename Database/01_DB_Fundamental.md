@@ -1,4 +1,4 @@
-# 📂 Database Study Notes
+# Database Study Notes
 
 ## 1. Database Basics
 ### RDBMS vs NoSQL
