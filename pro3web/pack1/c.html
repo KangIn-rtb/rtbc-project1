@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ---form 태그(자료 입력용 태그)---
+    <form method="get">
+        1. 이름 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" id="irum" value="초기값" size="10"><br>
+        2. 비밀번호 : <input type="password" name="pwd" size="10"><br>
+        3. 메세지 :<br><textarea name="msg" cols="50" rows="10"></textarea><br> <!--멀티라인 텍스트 박스-->
+        4. 학년 :   <input type="radio" name="hak" value="1" checked>1학년
+                    <input type="radio" name="hak" value="2" >2학년
+                    <input type="radio" name="hak" value="3" >3학년
+                    <input type="radio" name="hak" value="4" >4학년
+                    <br>
+        5. 과목 :   <input type="checkbox" name="gwa" value="python">파이썬&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="gwa" value="db">db&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="gwa" value="web">web&nbsp;&nbsp;&nbsp;
+                    <br>
+        6. 지역 :   <select name="addr">
+                    <option value="c" selected>시청</option>
+                    <option value="j" >종로</option>
+                    <option value="k" >강남</option>
+                    </select>
+                    <br>
+        7. <input type="file" name="fname"><br>
+        8. 숨김 : <input type="hidden" name="ji" value="대한민국">
+        <br><br>
+        <input type="submit" value="전송확인">
+        <input type="reset" value="입력 취소">
+    </form>
+</body> 
+</html>
