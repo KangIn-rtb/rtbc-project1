@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript">
+        function bb(){
+            document.write(`bb 함수 실행 성공`);
+            cc(5);
+            let re = cc(5);
+            document.write(`<br>re는 ${re}`);
+            dd(7,8);
+            dd(7,8,9); // 3번째는 무시
+            dd(7); // 7과 undefined가 들어감
+        }
+
+        function cc(para){ // 매개변수 있는 함수
+            let kk = para + 10;
+            document.write(`<br>${kk}`)
+            return kk;
+        }
+        function dd(para1,para2){
+            document.write(`<br>dd함수에서 ${para1} ${para2}`);
+        }
+        
+        let a = 100;
+        const b = 200;
+
+        function func(){
+            let c = 300;
+            const d = 400;
+            document.write(`<br>a:${a} b:${b}`);
+            document.write(`<br>c:${c} d:${d}`);
+        }
+    </script>
+</head>
+<body>
+    함수(function) : 어떤 특별한 목적의 작업을 수행하도록 설계된 독립적 블록{}을 의미
+    <br>
+    <script>
+        // 내장함수 : js가 기본 지원
+        let str = "Java script Language"
+        document.write(`<br>str.charAt(2) :  ${str.charAt(2)}`) 
+        document.write(`<br>str.bold() :  ${str.bold(2)}`) 
+        document.write(`<br>Math.abs(-7) :  ${Math.abs(-7)}`) 
+    </script>
+    <hr>
+    사용자 정의 함수<br>
+    <script>
+        let count = 0;
+        function aa(){ // 함수 선
+            count += 1;
+            document.write(count+"번 수행<br>");
+        }
+        aa();
+        aa();
+        aa();
+        document.write(`<br> 함수는 참조형 타입 : ${typeof(aa)}<br><br>`);
+    </script>
+    <div>오늘은 금요일 : ...</div>
+    <script>
+        aa();
+    </script>
+    <div><b>생각의 전환 : html 선언부에 js 코드(함수) 작성 후 함수 호출하기</b></div>
+    <br>
+    <script>
+        bb();
+        func();
+        // document.write(`<br>c:${c} d:${d}`); // err 지역변수 불러오려함
+    </script>
+</body>
+</html>

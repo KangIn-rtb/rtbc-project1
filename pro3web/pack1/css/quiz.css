@@ -3,3 +3,5 @@
 #memu{width: 100px;}
 #gak{height: 30px;}
 a:link{text-decoration: none;}
+a{color: black;}
+a:hover{color: crimson;}

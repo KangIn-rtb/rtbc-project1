@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    조건 판단문 if <br>
+    <script>
+        // let ave = prompt("평균점수입력: ","80");
+        // document.write("ave: ",ave);
+        let ave = 85;
+        if(ave >= 90){
+            document.write("점수: " + ave + "이므로 <b style='color:blue'>우수</b>");
+        }else if(ave >= 70){
+            document.write("점수: " + ave + "이므로 <b style='color:black'>보통</b>");
+            document.write("&nbsp;&nbsp;와우");
+        }else{
+            document.write("점수: " + ave + "이므로 <b style='color:crimson'>저조</b>");
+        }
+    </script>
+    <hr>
+    조건 판단문 : switch<br>
+    <script>
+        let result = "A" // 학점기억변수
+        
+        switch(result){
+            case "A":{
+                document.write("매우 우수");
+                document.write("  와우");
+                break;
+            }
+            case "B":document.write("우수");break;
+            case "C":document.write("보통");break;
+            // case "D":document.write("저조");break;
+            case "D": // 밑줄로 내려감
+            case "F":document.write("불량");break;
+            default:document.write("기타");
+        }
+    </script>
+</body>
+</html>
