@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = () =>{
+            document.querySelector("#btnGet").onclick = getFunc;
+            document.querySelector("#btnPost").onclick = postFunc;
+        }
+        let xhr;
+        function getFunc(){
+            let irum = frm.name.value;
+            let nai = frm.age.value;
+            // alert(irum + ' ' + nai);
+            xhr = new XMLHttpRequest();
+            let fname = "js.py?irum" + irum + "&nai=" + nai;
+            xhr.open("GET", fname, true); // 동기 비동기 결정 true 비동기 false면 동기 
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4 && xhr.status === 200){ // readState = 4 데이터 전부 받음 & status = 200 요청 성공
+                    process1();
+                }
+            }
+            xhr.send();
+        }
+        function process1(){
+            alert(xhr.responseText);
+        }
+        function postFunc(){
+            
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ajax 이해 : get, post</h2>
+    <form name="frm">
+        이름 : <input type="text" name="name" value="tom"><br>
+        나이 : <input type="text" name="age" value="33"><br>
+        <input type="button" value="get 방식" id="btnGet">
+        <input type="button" value="post 방식" id="btnPost">
+
+    </form>
+</body>
+</html>
