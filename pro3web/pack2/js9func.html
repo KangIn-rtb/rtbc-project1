@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ES6 부터는 화살표 함수 라는 새로운 문법으로 함수를 만드들 수 있다. <br>
+    화살표 함수는 => 기호를 사용하여 funtion 키워드를 생략한다.<br>
+    함수 표현식 보다 단순한 문법으로 함수 처리가 가능해진다.<br>
+    형식 : let 변수 = (매개변수 1, ...) => {표현식} <br>
+    <script>
+        'use strict'; // ES6 이후의 문법만 쓰겠다 라는 뜻 -> ES5 쓰면 오류
+        
+        let sum1 = function(a,b){
+            return a+b;
+        }
+        let sum2 = (a,b) => {return a+b};
+        let sum3 = (a,b) => a+b;
+        let double1 = n => n*2;
+        document.write(sum1(1,3),"<br>");
+        document.write(sum2(4,5),"<br>");
+        document.write(sum2(10,32),"<br>");
+        document.write(double1(2),"<br>");
+
+        let sayHI = () => document.write("안녕하세요<br>");
+        sayHI();
+
+        let age = 25;
+        let welcome = (age < 30)?() => document.write(`안녕<br>`):document.write(`반가워<br>`);
+        welcome();
+
+        let sumFunc = (a,b) => {
+            let result = a+b;
+            return result;
+        }
+        document.write(`${sumFunc(1,5)}<br>`);
+    </script>
+</body>
+</html>
