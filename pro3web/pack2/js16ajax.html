@@ -12,7 +12,8 @@
             let nai = frm.age.value;
             // alert(irum + ' ' + nai);
             xhr = new XMLHttpRequest();
-            let fname = "js.py?irum" + irum + "&nai=" + nai;
+            let fname = "js16.py?irum=" + irum + "&nai=" + nai;
+            // 임시방편용 js.py작성 - json 반환
             xhr.open("GET", fname, true); // 동기 비동기 결정 true 비동기 false면 동기 
             xhr.onreadystatechange = function(){
                 if(xhr.readyState === 4 && xhr.status === 200){ // readState = 4 데이터 전부 받음 & status = 200 요청 성공
@@ -21,11 +22,22 @@
             }
             xhr.send();
         }
+        function postFunc(){
+            let irum = frm.name.value;
+            let nai = frm.age.value;
+            xhr = new XMLHttpRequest();
+            let fname = "js16.py";
+            xhr.open("POST", fname, true); // 동기 비동기 결정 true 비동기 false면 동기 
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4 && xhr.status === 200){ // readState = 4 데이터 전부 받음 & status = 200 요청 성공
+                    process1();
+                }
+            }
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+            xhr.send("irum=" + irum + "&nai=" + nai); // 바디(리퀘스트 영역의 바디) 영역에 포함되어 전송(대용량)
+        }
         function process1(){
             alert(xhr.responseText);
-        }
-        function postFunc(){
-            
         }
     </script>
     <title>Document</title>
