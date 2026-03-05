@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}메인 : Jinja2{% endblock %}
+
+{% block content %}
+    <h2>GET 방식 요청(요청명?변수=값&변수=값)</h2>
+    방법1 :  <br>
+    <a href="/get_result?username=관우&age=26">get으로 자료 전달</a>
+    <br>
+    방법2 : <br>
+    <form action="get_result" method="get">
+        이름 : <input type="text" name="username"><br>
+        나이 : <input type="number" name="age"><br>
+        <input type="submit" value="전송">
+    </form>
+
+{% endblock %}
