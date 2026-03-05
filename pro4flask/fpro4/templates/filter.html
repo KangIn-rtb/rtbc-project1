@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}메인 : Jinja2{% endblock %}
+
+{% block content %}
+<h3>필터 옵션 사용 예제</h3>
+원본 메세지 : {{message}}<br>
+대문자로 : {{message | upper}}<br>
+첫 글자 대문자로 : {{message | capitalize}}<br>
+단어별 첫 글자 대문자로 : {{message | title}}<br>
+가격 : {{price}}<br>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}메인 : Jinja2{% endblock %}
+
+{% block content %}
+<h3>반복문 예제</h3>
+<ul>
+    {% for i in user %}
+        <li>{{loop.index}}번째 사람 : {{i}}</li>
+    {% endfor %}
+</ul>
+
+<p>총 인원 : {{user | length}}</p> <!-- | 문자로 옵션 가능-->
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}메인 : Jinja2{% endblock %}
+
+{% block content %}
+<h3>조건 연습</h3>
+
+{% if score >= 90 %}
+    <p>성적 : {{score}} -> a등급</p>
+{% elif score >= 80 %}
+    <p>성적 : {{score}} -> b등급</p>
+{% else %}
+    <p>성적 : {{score}} -> c등급</p>
+{% endif %}
+
+{% endblock %}
