@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>* 장바 구니 *</h3>
+    {% if cart %}
+    <table border="1">
+        <tr>
+            <th>상품명</th><th>가격</th><th>수량</th><th>총합</th>
+        </tr>
+        <!-- {% set ns = namespace(total=0) %} -->
+        {% for name,info in cart.items() %}
+            {% set subtotal = info.price * info.qty %}
+            <!-- {% set ns.total  = ns.total + subtotal %} -->
+            <tr>
+                <td>{{name}}</td><td>{{info.price}}</td><td>{{info.qty}}</td><td>{{subtotal}}</td>
+                <td><a href="/remove/{{name}}">삭제</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <!-- <p>총 금액 : {{ns.total}}원</p> -->
+    <a href="/clear">장바구니 비우기</a>
+    {% else %}
+    <p>장바구니가 비었습니다.</p>
+    {% endif %}
+{% endblock %}
