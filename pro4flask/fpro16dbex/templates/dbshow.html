@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h2>직원 데이터 분석 리포트</h2>
+        
+        <h3>1. 직원 상세 정보 (근무년수 포함)</h3>
+        <div>{{ jik_table | safe }}</div>
+
+        <h3>2. 부서/직급별 연봉 합계 및 평균</h3>
+        <div>{{ stats_table | safe }}</div>
+
+        <h3>3. 부서별 연봉 분석 시각화</h3>
+        <div class="text-center">
+            <img src="data:image/png;base64,{{ graph_url }}" class="img-fluid">
+        </div>
+
+        <h3>4. 성별 및 직급별 빈도표</h3>
+        <div>{{ ctab_table | safe }}</div>
+
+        <h3>5. 부서별 최고 연봉자 출력</h3>
+        <div>{{ top_earners | safe }}</div>
+
+        <h3>6. 부서별 직원 비율 계산</h3>
+        <div>{{ ratio_df | safe }}</div>
+
+        <br>
+        <a href="/" class="btn btn-primary">홈으로 돌아가기</a>
+    </div>
+</body>
+</html>
