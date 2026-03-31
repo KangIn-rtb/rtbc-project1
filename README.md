@@ -4,5 +4,8 @@
 - [Database](./Database/)
 - [Python](./Python/)
 - [Webprogrming](./Webprograming/) 
-- [Flask](./Flask/) <-now
+- [Flask](./Flask/)
+- [Numpy](./Numpy/)
+- [Pandas](./Pandas/)
+- [Plot](./Plot/) <- now
 
