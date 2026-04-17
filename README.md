@@ -7,5 +7,6 @@
 - [Flask](./Flask/)
 - [Numpy](./Numpy/)
 - [Pandas](./Pandas/)
-- [Plot](./Plot/) <- now
+- [Plot](./Plot/)
+- [DataAnalysis1](./DataAnalysis1/) <-now
 
