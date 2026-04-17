@@ -8,5 +8,5 @@
 - [Numpy](./Numpy/)
 - [Pandas](./Pandas/)
 - [Plot](./Plot/)
-- [DataAnalysis](./
+- [DataAnalysis](./Data analysis 1/) <-now
 
